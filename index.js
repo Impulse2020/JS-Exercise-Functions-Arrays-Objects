@@ -243,7 +243,7 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-  /* code here */
+  return `This is a ${inventory[index].car_make} ${inventory[index].car_model}`;
 }
 
 /**
@@ -257,8 +257,9 @@ function getCarInfoByIndex(inventory, index) {
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
 */
-function getLastCarInfo(/* code here */) {
-  /* code here */
+function getLastCarInfo(inventory) {
+  let end = inventory.length - 1;
+  return `This is a ${inventory[end].car_make} ${inventory[end].car_model}} `;
 }
 
 /**
@@ -270,10 +271,38 @@ function getLastCarInfo(/* code here */) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
-function getModelYears(/* code here */) {
-  /* code here */
+function getModelYears(inventory) {
+  let years = [];
+  let i = 0;
+  for(const car_year of inventory){
+    years.push(inventory[i].car_year)
+    i++;
+  }
+  return years;
 }
+/*let inventory =[
+  {
+    car_make:'chevy',
+    car_model:'cruze',
+    car_year: '2016',
+  },
+  {
+    car_make:'dodge',
+    car_model:'charger',
+    car_year:'2012',
 
+  },
+  {
+    car_make:'pontiac',
+    car_model:'firebird',
+    car_year:'1993',
+  },
+];
+console.log(getCarInfoByIndex(inventory, 1));
+console.log(getLastCarInfo(inventory));
+console.log(getModelYears(inventory));
+*/
+let hiddenvariable = 'hiding';
 /**
  * ### Challenge `getCarInfoById`
  *  * * THIS ONE IS A STRETCH GOAL. ATTEMPT IT ONLY AFTER
