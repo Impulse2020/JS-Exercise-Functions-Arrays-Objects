@@ -131,7 +131,8 @@ function getName(object) {
 return `Hello, my name is ${person.name}! My id is ${person.id}, you can contact me at ${person.email}`;
 }
 
-console.log(getName(person));
+// console.log(getName(person));
+
 /**
  * ### Challenge `appleIndex`
  * 
@@ -147,9 +148,15 @@ console.log(getName(person));
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(/* code here */) {
-  /* code here */
+function appleIndex(array) {
+  for(let i = 0; i < array.length; i++){
+    if(array[i] === 'apple'){
+      return i;
+    }
+    }
 }
+let fruits = ['oranges', 'pears', 'bananas', 'kiwis', 'papayas', 'kumquats','pinapple','mango', 'tomatoes','grapes','blueberries','cherries','strawberries','raspberry', 'apple'];
+// console.log(appleIndex(fruits));
 
 /**
  * ### Challenge `isItAnApple`
