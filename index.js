@@ -173,11 +173,22 @@ let fruits = ['oranges', 'pears', 'bananas', 'kiwis', 'papayas', 'kumquats','pin
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(/* code here */) {
-  /* code here */
+function isItAnApple(array) {
+  let boolean= [];
+  for(let i = 0; i < array.length; i++){
+    if(array[i] === 'apple'){
+      boolean.push('True')
+    }
+    else{
+      boolean.push('false')
+    }
+  }
+return boolean;
 }
+fruits[4] = 'apple';
+fruits[2] = 'apple';
 
-
+// console.log(isItAnApple(fruits));
 
 /*
 // ⭐️ Example Test Data ⭐️
