@@ -78,11 +78,16 @@ function temperatureCtoF(celsius) {
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(/* code here */) {
-  /* code here */
+function temperatureInF(temperature, sys) {
+  if(sys === 'C'){
+    return temperatureCtoF(temperature) + 'F';    
+  }
+  else{
+    return `${temperature}F`;
+  }
 }
-
-
+// console.log(temperatureInF(88,'F'));
+// console.log(temperatureInF(88,'C'));
 /**
  * ### Challenge `makePersonObject`
  * 
